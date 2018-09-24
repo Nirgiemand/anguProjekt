@@ -1,5 +1,19 @@
 #heed {
     padding-right: 20px;
+    font-family: "Candal";
+
 }
+
 .nounderline {
-  text-decoration: none;
+    text-decoration: none;
+    color: #b93f3f;
+}
+
+.footer {
+    text-align: center;
+    color: #9a9898;
+    padding: 20px;
+}
+.navbar {
+    background-color: #f0f0f0; 
+}
