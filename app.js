@@ -7,5 +7,5 @@ myApp.controller('mainController', ['$scope', function ($scope) {
 }]);
 
 myApp.controller('secondController', ['$scope', function($scope) {
-    $scope.name = 'Õli';
+    $scope.name = 'GGGGG';
 }]);
