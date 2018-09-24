@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favi.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">AngularJS</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i>Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div ng-controller="mainController">
+
+            <h1> {{ name }}</h1>
+            <h2> {{ papa }}</h2>
+
+
+        </div>
+        <div ng-controller="secondController">
+            {{ name }}
+        </div>
+    </div>
+</body>
+
+</html>
