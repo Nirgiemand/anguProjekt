@@ -17,3 +17,9 @@
 .navbar {
     background-color: #f0f0f0; 
 }
+p {
+    font-size: 1.03em;
+}
+body {
+    font-family: sans-serif;
+}
