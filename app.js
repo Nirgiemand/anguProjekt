@@ -17,9 +17,6 @@ myApp.config(function ($routeProvider) {
             templateUrl: 'pages/example.htm'
 
         })
-        .when('/sixth', {
-            templateUrl: 'pages/resources.htm',
-            controller: 'sixthController'})
         .when('/fourth', {
             templateUrl: 'pages/game.htm',
             controller: 'fourthController'
@@ -27,6 +24,10 @@ myApp.config(function ($routeProvider) {
         .when('/fifth', {
             templateUrl: 'pages/feedback.htm',
             controller: 'fifthController'
+        })
+        .when('/sixth', {
+            templateUrl: 'pages/resources.htm',
+            controller: 'sixthController'
         })
         .otherwise({
             redirectTo: '/'
@@ -86,5 +87,5 @@ myApp.controller('fifthController', ['$scope', function ($scope) {
     $scope.materjal = " ";
 }]);
 myApp.controller('sixthController', ['$scope', function ($scope) {
-        $scope.materjal = " ";
+    $scope.materjal = " ";
 }]);
