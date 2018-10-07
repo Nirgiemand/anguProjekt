@@ -1,0 +1,27 @@
+<div class="row">
+<div class="col-sm-4"><h1> HT's To Do list:</h1></div>
+<div class="col-sm-4"></div>
+<div class="col-sm-2"></div>
+<div class="col-sm-2">
+    <img ng-src="{{pic}}" class="img1" alt="Angular">
+</div>
+</div>
+<hr>
+<br>
+
+<form ng-submit="todoAdd()">
+    <input type="text" ng-model="todoInput" size="50" placeholder='Please, Sir, I want some more'>
+    <button type="submit" class="button btn-info">Let Oliver get his wish</button>
+</form>
+
+<br>
+
+<div ng-repeat="x in todoList" style="padding: 10px;">
+    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+</div>
+<br>
+<hr>
+<p><button class="btn btn-success" ng-click="remove()">Remove done tasks</button></p>
+<br>
+<p style="font-size: 0.6em">Credits to Oliver Twist
+</p>

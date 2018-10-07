@@ -21,5 +21,12 @@ p {
     font-size: 1.03em;
 }
 body {
-    font-family: sans-serif;
+    font-family: "Cabin";
+    font-size: 1.05em;
+}
+.img {
+    width: 100%;
+}
+.img1 {
+    width: 35%;
 }

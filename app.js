@@ -4,55 +4,57 @@ myApp.config(function ($routeProvider) {
     $routeProvider
 
         .when('/', {
-            templateUrl: 'pages/main.html',
+            templateUrl: 'pages/main.htm',
             controller: 'mainController'
         })
 
         .when('/second', {
             controller: 'secondController',
-            templateUrl: 'pages/todo.html'
+            templateUrl: 'pages/todo.htm'
         })
         .when('/third', {
-            templateUrl: 'pages/example.html',
+            templateUrl: 'pages/example.htm',
             controller: 'thirdController'
 
         })
         .when('/fourth', {
-            templateUrl: 'pages/game.html',
+            templateUrl: 'pages/game.htm',
             controller: 'fourthController'
         })
         .when('/fifth', {
-            templateUrl: 'pages/feedback.html',
+            templateUrl: 'pages/feedback.htm',
             controller: 'fifthController'
         })
+        .otherwise({
+        redirectTo: '/'
+    });
 });
 
 
 
 myApp.controller('mainController', ['$scope', function ($scope) {
 
-    $scope.papa = 'Test works? Angular is not defined: but works... U wut M8, should I continue? Ofc.';
+    $scope.papa = 'Test works? Angular is not defined: but works... U wut M8, should I continue? Ofcourse';
 }]);
 
 myApp.controller('secondController', ['$scope', function ($scope) {
-    $scope.todos = [
-        {text:'Learn AngularJS', done:false},
-        {text:'Build an app', done:false}
-    ];
-      
-  $scope.getTotalTodos = function () {
-    return $scope.todos.length;
-  };
-  
-  
-  $scope.addTodo = function () {
-    $scope.todos.push({text:$scope.formTodoText, done:false});
-    $scope.formTodoText = '';
-  };
-  
-    $scope.clearCompleted = function () {
-        $scope.todos = _.filter($scope.todos, function(todo){
-            return !todo.done;
+     $scope.todoList = [
+         {todoText:'Learn AngularJS', done:false},
+         {todoText:'Score a goal or two in the last league game', done:false},
+         {todoText:'Look at the API stuff', done:true},
+         {todoText:'Finish AngularJS project', done:false}
+     ];
+
+    $scope.todoAdd = function() {
+        $scope.todoList.push({todoText:$scope.todoInput, done:false});
+        $scope.todoInput = "";
+    };
+
+    $scope.remove = function() {
+        var oldList = $scope.todoList;
+        $scope.todoList = [];
+        angular.forEach(oldList, function(x) {
+            if (!x.done) $scope.todoList.push(x);
         });
     };
 }]);
