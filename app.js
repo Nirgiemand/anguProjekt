@@ -13,10 +13,13 @@ myApp.config(function ($routeProvider) {
             templateUrl: 'pages/todo.htm'
         })
         .when('/third', {
-            templateUrl: 'pages/example.htm',
-            controller: 'thirdController'
+            controller: 'thirdController',
+            templateUrl: 'pages/example.htm'
 
         })
+        .when('/sixth', {
+            templateUrl: 'pages/resources.htm',
+            controller: 'sixthController'})
         .when('/fourth', {
             templateUrl: 'pages/game.htm',
             controller: 'fourthController'
@@ -26,8 +29,8 @@ myApp.config(function ($routeProvider) {
             controller: 'fifthController'
         })
         .otherwise({
-        redirectTo: '/'
-    });
+            redirectTo: '/'
+        });
 });
 
 
@@ -38,23 +41,50 @@ myApp.controller('mainController', ['$scope', function ($scope) {
 }]);
 
 myApp.controller('secondController', ['$scope', function ($scope) {
-     $scope.todoList = [
-         {todoText:'Learn AngularJS', done:false},
-         {todoText:'Score a goal or two in the last league game', done:false},
-         {todoText:'Look at the API stuff', done:true},
-         {todoText:'Finish AngularJS project', done:false}
+    $scope.todoList = [
+        {
+            todoText: 'Learn AngularJS',
+            done: false
+                },
+        {
+            todoText: 'Score a goal or two in the last league game',
+            done: false
+                },
+        {
+            todoText: 'Look at the API stuff',
+            done: true
+                },
+        {
+            todoText: 'Finish AngularJS project',
+            done: false
+                }
      ];
 
-    $scope.todoAdd = function() {
-        $scope.todoList.push({todoText:$scope.todoInput, done:false});
+    $scope.todoAdd = function () {
+        $scope.todoList.push({
+            todoText: $scope.todoInput,
+            done: false
+        });
         $scope.todoInput = "";
     };
 
-    $scope.remove = function() {
+    $scope.remove = function () {
         var oldList = $scope.todoList;
         $scope.todoList = [];
-        angular.forEach(oldList, function(x) {
+        angular.forEach(oldList, function (x) {
             if (!x.done) $scope.todoList.push(x);
         });
     };
+}]);
+myApp.controller('thirdController', ['$scope', function ($scope) {
+    $scope.materjal = " ";
+}]);
+myApp.controller('fourthController', ['$scope', function ($scope) {
+    $scope.materjal = " ";
+}]);
+myApp.controller('fifthController', ['$scope', function ($scope) {
+    $scope.materjal = " ";
+}]);
+myApp.controller('sixthController', ['$scope', function ($scope) {
+        $scope.materjal = " ";
 }]);
