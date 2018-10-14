@@ -1,5 +1,5 @@
 <div class="row">
-<div class="col-sm-4"><h1>Game:</h1></div>
+<div class="col-sm-4"><h1>Memory Game:</h1></div>
 <div class="col-sm-4"></div>
 <div class="col-sm-2"></div>
 <div class="col-sm-2">
@@ -8,3 +8,30 @@
 </div>
 <hr>
 <br>
+<div class="container">
+<div class="row">
+<div class="col-md-10">
+<div>Pairs left to match: {{game.unmatchedPairs}}</div>
+  <div>Matching: {{game.firstPick.title}}</div>
+
+  <table>
+    <tr ng-repeat="row in game.grid">
+      <td ng-repeat="tile in row" ng-click="game.flipTile(tile)">
+
+        <!-- this entire block can be replaced with our custom component mgCard:
+          <mg-card tile="tile"></mg-card>
+        -->
+        <div class="container" id="pela">
+          <div class="card" ng-class="{flipped: tile.flipped}">
+              <img class="front" ng-src="img/back.png">
+              <img class="back" ng-src="img/{{tile.title}}.png">
+          </div>
+        </div>
+
+      </td>
+    </tr>
+  </table>
+  </div>
+  <div class="col-md-2">
+<div class="message"><h3>{{game.message}}</h3></div>
+</div></div></div>

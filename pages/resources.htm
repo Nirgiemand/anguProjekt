@@ -18,35 +18,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>AngularJS Tutorial video</td>
-            <td>1-hour tutorial, I have watched many of these, but this one I found the most educative.</td>
-            <td><a href="https://www.youtube.com/watch?v=0kmdjqgO9IY&t">Video</a></td>
+        <tr ng-repeat="x in materjal1">
+            <td>  {{ x.Name }} </td>
+            <td>  {{ x.Description }} </td>
+            <td> <a href="{{ x.Link }}" target="_blank">Video</a>  </td>
         </tr>
-        <tr>
-            <td>Another tutorial video</td>
-            <td>Anything from Travesy Media is useful, you should <strong>really follow</strong> this channel !</td>
-            <td><a href="https://www.youtube.com/watch?v=KhzGSHNhnbI&t=910s">Video</a></td>
+        <tr ng-repeat="x in materjal">
+            <td>  {{ x.Name }} </td>
+            <td>  {{ x.Description }} </td>
+            <td> <a href="{{ x.Link }}" target="_blank">Link</a>  </td>
         </tr>
-        <tr>
-            <td>Routing</td>
-            <td>I had couple errors with routing and couldn't find solution from online, so here's how you should mark href in your index.html file href="#!/".</td>
-            <td><a href="https://www.w3schools.com/angular/angular_routing.asp">Link</a></td>
-        </tr>
-        <tr>
-            <td>W3Schools</td>
-            <td>Ofcourse, good old W3Schools, you can learn a lot from there.</td>
-            <td><a href="https://www.w3schools.com/angular/default.asp">Link</a></td>
-        </tr>
-        <tr>
-            <td>TutorialsPoint</td>
-            <td>Some people suggest this website for AngularJS learning, it seems fine and informative, but I did not use it.</td>
-            <td><a href="https://www.tutorialspoint.com/angularjs/index.htm">Link</a></td>
-        </tr>
-        <tr>
-            <td>CodeAcademy</td>
-            <td>Codeacademy offers a course for learning AngularJS.</td>
-            <td><a href="https://www.codecademy.com/learn/learn-angularjs">Link</a></td>
-        </tr>
+
     </tbody>
 </table>
