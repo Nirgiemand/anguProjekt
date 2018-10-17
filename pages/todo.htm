@@ -19,9 +19,20 @@
 <div ng-repeat="x in todoList" style="padding: 10px;">
     <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
 </div>
+    <p style="margin: 10px 0 0 10px"> <span on></span>Tasks left to complete: {{todoList.length}}</p>
 <br>
 <hr>
 <p><button class="btn btn-success" ng-click="remove()">Remove done tasks</button></p>
 <br>
 <p style="font-size: 0.6em">Credits to Oliver Twist
 </p>
+<div ></div>
+
+
+<script>
+if(todoList.length===1){
+    HTMLSpanElement."mitu" = show;
+} else {
+    
+}
+</script>

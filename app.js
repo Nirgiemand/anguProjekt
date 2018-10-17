@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
+var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(function ($routeProvider) {
     $routeProvider
@@ -40,23 +40,35 @@ myApp.controller('mainController', ['$scope', function ($scope) {
     $scope.papa = 'Ofcourse';
 }]);
 
-myApp.controller('secondController', ['$scope', function ($scope) {
+myApp.controller('secondController', ['$scope', function ($scope, filterFilter) {
     $scope.todoList = [
         {
             todoText: 'Learn AngularJS',
-            done: false
+            done: true
                 },
         {
             todoText: 'Score a goal or two in the last league game',
+            done: true
+                },        
+        {
+            todoText: 'Angular 6 course',
             done: false
+                },        
+        {
+            todoText: 'Go for a walk with my dog-mate Bob',
+            done: true
                 },
         {
             todoText: 'Look at the API stuff',
             done: true
+                }, 
+        {
+            todoText: 'Learn and understand JAVA',
+            done: false
                 },
         {
             todoText: 'Finish AngularJS project',
-            done: false
+            done: true
                 }
      ];
 
@@ -75,6 +87,9 @@ myApp.controller('secondController', ['$scope', function ($scope) {
             if (!x.done) $scope.todoList.push(x);
         });
     };
+    /*  $scope.getCount = function(){
+          return filterFilter($scope.todoList)length;
+      } */
 }]);
 myApp.controller('thirdController', ['$scope', function ($scope) {
 
@@ -146,24 +161,4 @@ myApp.controller('sixthController', ['$scope', function ($scope) {
             "Description": "Anything from Travesy Media is useful, you should really follow this channel!",
             "Link": "https://www.youtube.com/watch?v=KhzGSHNhnbI&t=910s"
     }];
-}]);
-
-myApp.controller('firstController', ['$scope', '$route', function ($scope, $route) {
-    $scope.planet = {
-        name: 'Mercury',
-        carbondioxide: 'Trace Amount',
-        nitrogen: 'Trace Amount',
-        oxygen: '42%',
-        hydrogen: '22%'
-    };
-}]);
-
-myApp.controller('secundaController', ['$scope', '$route', function ($scope, $route) {
-    $scope.planet = {
-        name: 'Venus',
-        carbondioxide: '96.5%',
-        nitrogen: '3.5%',
-        oxygen: 'Almost None',
-        hydrogen: 'Almost None'
-    }
 }]);
