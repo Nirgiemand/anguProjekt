@@ -93,8 +93,8 @@ myApp.controller('thirdController', ['$scope', function ($scope) {
 }]);
 
 myApp.factory('game', function () {
-    var tileNames = ['Messi', 'zizou', 'zidane', 'henry', 'rooney', 'modric',
-    'riku', 'vidic'];
+    var tileNames = ['Messi', 'Zizou', 'Zidane', 'Henry', 'Rooney', 'Modric',
+    'papa Ricardo', 'Vidic'];
 
     return new Game(tileNames);
 });
