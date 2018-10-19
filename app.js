@@ -87,9 +87,6 @@ myApp.controller('secondController', ['$scope', function ($scope) {
             if (!x.done) $scope.todoList.push(x);
         });
     };
-    /*  $scope.getCount = function(){
-          return filterFilter($scope.todoList)length;
-      } */
 }]);
 myApp.controller('thirdController', ['$scope', function ($scope) {
     
