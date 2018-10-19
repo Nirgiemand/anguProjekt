@@ -40,7 +40,7 @@ myApp.controller('mainController', ['$scope', function ($scope) {
     $scope.papa = 'Ofcourse';
 }]);
 
-myApp.controller('secondController', ['$scope', function ($scope, filterFilter) {
+myApp.controller('secondController', ['$scope', function ($scope) {
     $scope.todoList = [
         {
             todoText: 'Learn AngularJS',
@@ -92,12 +92,12 @@ myApp.controller('secondController', ['$scope', function ($scope, filterFilter) 
       } */
 }]);
 myApp.controller('thirdController', ['$scope', function ($scope) {
-
+    
 }]);
 
 myApp.factory('game', function () {
-    var tileNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
-    'that-guy', 'zeppelin'];
+    var tileNames = ['Messi', 'zizou', 'zidane', 'henry', 'rooney', 'modric',
+    'riku', 'vidic'];
 
     return new Game(tileNames);
 });
@@ -115,7 +115,7 @@ myApp.directive('mgCard', function () {
         // index.html
         template: '<div class="container">' +
             '<div class="card" ng-class="{flipped: tile.flipped}">' +
-            '<img class="front" ng-src="img/Troll.png">' +
+            '<img class="front" ng-src="img/taust.jpg">' +
             '<img class="back" ng-src="img/{{tile.title}}.png">' +
             '</div>' +
             '</div>',

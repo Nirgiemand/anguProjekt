@@ -48,7 +48,7 @@ function Game(tileNames) {
   }
 }
 
-Game.MESSAGE_CLICK = 'Click on a tile.';
+Game.MESSAGE_CLICK = 'Click on a greatest football club in the world.';
 Game.MESSAGE_ONE_MORE = 'Pick one more card.'
 Game.MESSAGE_MISS = 'Try again.';
 Game.MESSAGE_MATCH = 'Good job! Keep going.';

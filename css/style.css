@@ -33,8 +33,8 @@ body {
 }
 
 #pela {
-  width: 165px;
-  height: 200px;
+  width: 155px;
+  height: 150px;
   position: relative;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
@@ -92,34 +92,4 @@ body {
 .message {
     margin: 450px auto;
   text-align: center;
-}
-
-.planet-container {
-  position: relative;
-  margin: 10px 20px;
-}
-
-.planet-view {
-  padding: 10px;
-}
-
-.planet-view.ng-animate {
-  transition: all ease 0.4s;
-  position: absolute;
-}
-
-.planet-view.ng-enter {
-  top: 200px;
-  opacity: 0;
-}
-
-.planet-view.ng-leave,
-.planet-view.ng-enter.ng-enter-active {
-  top: 0;
-  opacity: 1;
-}
-
-.planet-view.ng-leave.ng-leave-active {
-  top: -200px;
-  opacity: 0;
 }
