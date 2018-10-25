@@ -1,11 +1,112 @@
 <div class="row">
-<div class="col-sm-4"><h1>Examples:</h1></div>
-<div class="col-sm-4"></div>
-<div class="col-sm-2"></div>
-<div class="col-sm-2">
-    <img ng-src="{{pic}}" class="img1" alt="Angular">
-</div>
+    <div class="col-sm-4">
+        <h1>Examples:</h1>
+    </div>
+    <div class="col-sm-4"></div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2">
+        <img ng-src="{{pic}}" class="img1" alt="Angular">
+    </div>
 </div>
 <hr>
 <br>
-  
+
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'AngularJs')" id="defaultOpen">How to use AngularJs?</button>
+    <button class="tablinks" onclick="openTab(event, 'Interpolation')">Interpolation</button>
+    <button class="tablinks" onclick="openTab(event, 'Watch')">Watch</button>
+    <button class="tablinks" onclick="openTab(event, 'Routing')">Routing</button>
+    <button class="tablinks" onclick="openTab(event, 'Timeout')">Timeout</button>
+</div>
+
+<div id="AngularJs" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <br>
+    <h3>AngularJS</h3>
+    <p>Solution is simple: just go to angularjs.org website and select "Download" from Develop's category in the right top corner: <br> <br>
+    <img class="img" ng-src="{{image[0].src}}"/> <br> <br> 
+    Select the newest version: <br> <br>
+    <img class="img2" ng-src="{{image[1].src}}"/> <br> <br>
+    Here you can download every module for AngularJS: <br> <br>
+    <img class="img2" ng-src="{{image[2].src}}"/> <br> <br>
+    And then just add them to your code, before your JS files. <br> <br>
+    <img class="img" ng-src="{{image[3].src}}"/> <br> <br>
+    </p>
+</div>
+
+<div id="Interpolation" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <br>
+    <h3>Interpolation</h3>
+    <p>Interpolation markup with embedded expressions is used to provide data-binding to text nodes and attribute values: <br> <br>
+    <img class="img1" ng-src="{{image[5].src}}"/> <br> <br> 
+    How to use Interpolation: <br> <br>
+    <img class="img1" ng-src="{{image[4].src}}"/> <br> <br>
+    Result is the collection of images on the page: <br> <br>
+    <img class="img3" ng-src="{{image[7].src}}"/> <br> <br>
+</div>
+
+<div id="Watch" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <br>
+    <h3>Watch</h3>
+    <p>Watch is a listener of AngularJS that simply "listens" a variable and everytime it changes, so does the value of variable. <br> Try it: </p>
+    <p>For example, try typing your name?</p>
+    <input type="text" ng-model="boxx" />
+    <br>
+    <p>Old value: </p> {{oldValue}} <br>
+    <p>New Value: </p> {{newValue}}
+    <br>
+    <span ng-if="oldValue.length"> <br> <strong>So, basically, everytime you type something, AngularJS watches and saves your old value and new value. Delete your writing and try again.</strong></span>
+</div>
+<div id="Routing" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <br>    
+    <h3>Routing</h3>
+    <p>As known, AngularJS is a Single-page application, which means that everytime you click on page elements, AngularJS loads you the exact component for the page and adds it to main "template". Because of this, website functions a lot faster. <br>
+    Basically, you create one Main index.html, which has all main components of your page - template, and then the "views" which create the variability of website and where all your different substances are.  <br> <br> For example, calculate how much time does it take to navigate on this page. <br>
+    <p>How Routing is used?: <br>
+    When URL is as shown, AngularJS uses appointed Controller and Template. <br> <br>
+    <img class="img1" ng-src="{{image[8].src}}"/> <br>  <br> 
+    And then add view to your main page: <br> <br>
+    <img class="img" ng-src="{{image[9].src}}"/> <br> <br>
+</div>
+<div id="Timeout" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <br>
+    <h3>Timeout</h3>
+    <p>Timeout changes the value of element after elected time, in 5 sec for this example: 
+    <br>
+    <span></span>
+    <br>
+    <img class="img3" ng-src="{{image[10].src}}"/> <br> <br> 
+    <h4>Hello, <strong>{{name}} !</strong></h4> <br> 
+    <p>Here's how timeout is used: <br> <br>
+    <img class="img1" ng-src="{{image[11].src}}"/> <br> <br> 
+    <i>Note: If timeout has already happened, refresh the page and check again.</i>
+    </p>
+</div>
+
+
+
+
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.tabName += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+</script>

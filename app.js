@@ -41,6 +41,10 @@ myApp.controller('mainController', ['$scope', function ($scope) {
 }]);
 
 myApp.controller('secondController', ['$scope', function ($scope) {
+    $scope.image = {
+        src: "img/tododo.png"
+    };
+        
     $scope.todoList = [
         {
             todoText: 'Learn AngularJS',
@@ -88,8 +92,31 @@ myApp.controller('secondController', ['$scope', function ($scope) {
         });
     };
 }]);
-myApp.controller('thirdController', ['$scope', function ($scope) {
+myApp.controller('thirdController', ['$scope', '$timeout', function ($scope, $timeout) {
+    $scope.image = [{
+        src: 'img/angularpaigaldus.PNG'},
+        {src: 'img/angularpaigaldus1.PNG'},
+        {src: 'img/angularpaigaldus2.PNG'},
+        {src: 'img/angularpaigaldus3.PNG'},
+        {src: 'img/inter.PNG'},
+        {src: 'img/inter2.PNG'},
+        {src: 'img/inter3.PNG'},
+        {src: 'img/inter4.PNG'},
+        {src: 'img/Route.PNG'},
+        {src: 'img/Route1.PNG'},
+        {src: 'img/timeout.PNG'},
+        {src: 'img/timeout1.PNG'}
+];
+    $scope.boxx = '';
+    $scope.$watch('boxx', function(newValue, oldValue){
+        $scope.newValue = newValue;
+        $scope.oldValue = oldValue;
+    });
+    $scope.name = "Visitor";
     
+    $timeout(function(){
+        $scope.name = " your name is now Gandalf";
+    }, 5000);
 }]);
 
 myApp.factory('game', function () {

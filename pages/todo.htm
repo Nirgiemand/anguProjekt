@@ -8,7 +8,9 @@
 </div>
 <hr>
 <br>
-
+<div class="container">
+<div class="row">
+<div class="col-md-9">
 <form ng-submit="todoAdd()">
     <input type="text" ng-model="todoInput" size="50" placeholder='Please, Sir, I want some more'>
     <button type="submit" class="btn-info">Let Oliver get his wish</button>
@@ -21,12 +23,17 @@
 </div>
     <p style="margin: 10px 0 0 10px"> <span on></span>Tasks left to complete: {{todoList.length}}</p>
 <br>
+</div>
+<div class="col-md-3">
+    <image class="img" ng-src="{{image.src}}"></image>
+</div>
+</div>
 <hr>
 <p><button class="btn btn-success" ng-click="remove()">Remove done tasks</button></p>
 <br>
 <p style="font-size: 0.6em">Credits to Oliver Twist
 </p>
-<div ></div>
+</div>
 
 
 <script>
