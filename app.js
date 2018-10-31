@@ -121,7 +121,7 @@ myApp.controller('thirdController', ['$scope', '$timeout', function ($scope, $ti
 
 myApp.factory('game', function () {
     var tileNames = ['Messi', 'Zizou', 'Zidane', 'Henry', 'Rooney', 'Modric',
-    'papa Ricardo', 'Vidic'];
+    'Papa Ricardo', 'Vidic'];
 
     return new Game(tileNames);
 });
